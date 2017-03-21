@@ -101,21 +101,27 @@ public class RandomUnit {
 	}
 	/**
 	 * @Title: getArrysNotRepeat
-	 * @Description: 获取一个不重复的随机数数组
+	 * @Description: 获取一个不重复的随机数数组(for循环)
 	 * @param length
 	 * @param min
 	 * @param max
 	 * @return: int[]
 	 */
-	public int[] getArrysNotRepeat(int length,int min,int max){
+	public int[] getArraysNotRepeat(int length,int min,int max){
 		if(length<1||length>(max-min)){
 			return null;
 		}
 		int[] arrays = new int[length];
 		int i=0;
-		while(i !=arrays.length) {
+		while(i <arrays.length) {
 			int key = this.minAndMax(min, max);
-			int binarySearch = Arrays.binarySearch(arrays, key);
+			int binarySearch = -1;
+			for(int j=0;j<i;j++){
+				if(arrays[j]==key){
+					binarySearch = 1;
+					break;
+				}
+			}
 			if(binarySearch <0){
 				arrays[i] = key;
 				i++;

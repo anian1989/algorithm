@@ -1,22 +1,45 @@
 package Test;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.junit.Test;
 
+import com.alibaba.fastjson.JSON;
+
 import Common.RandomUnit;
+import ch2.MaxSonLine;
 
 public class TestCommon {
+	RandomUnit randomUnit = new RandomUnit();
+	private static final Logger logger = LoggerFactory.getLogger(TestCommon.class);
 	@Test
 	public void testRondom(){
-		RandomUnit randomUnit = new RandomUnit();
 		/*for (int i = 0; i < 100; i++) {
 			
-			System.out.println(randomUnit.minAndMax(0,100));
+			logger.info(randomUnit.minAndMax(0,100));
 		}*/
 		long currentTimeMillis = System.currentTimeMillis();
-		int[] arrays = randomUnit.getArrysNotRepeat(100000, -10, 100000);
-		System.out.println("时间"+(System.currentTimeMillis()-currentTimeMillis));
+		int[] arrays = randomUnit.getArraysNotRepeat(100, -10, 100000);
+		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
 		for (int i = 0; i < arrays.length; i++) {
-			System.out.println(arrays[i]);
+			logger.info(""+arrays[i]);
 		}
+	}
+	@Test
+	public void testMaxSonLine1(){
+		int[] arrays = randomUnit.getArrays(800000, -10000, 10000);
+		String jsonString = JSON.toJSONString(arrays);
+//		logger.info(jsonString);
+		long currentTimeMillis = System.currentTimeMillis();
+		MaxSonLine maxSonLine = new MaxSonLine();
+		int basicFor = maxSonLine.basicFor(arrays);
+		logger.info(""+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info(""+basicFor);
+		currentTimeMillis = System.currentTimeMillis();
+		int subMaxSum = maxSonLine.subMaxSum(arrays, 0, arrays.length-1);
+		logger.info(""+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info(""+subMaxSum);
+		
+		
 	}
 }
