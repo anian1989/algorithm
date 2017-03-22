@@ -1,16 +1,13 @@
 package Common;
 
-import java.util.Arrays;
-import java.util.Random;
 
-import org.junit.Test;
 
 /**
  * 
  * @ClassName: RandomUnit
- * @Description: Éú³É¸÷ÖÖËæ»úÊı
+ * @Description:  ç”Ÿæˆå„ç§éšæœºæ•°
  * @author: junshuaizhang1
- * @date: 2017Äê3ÔÂ20ÈÕ ÏÂÎç2:21:48
+ * @date: 2017å¹´3æœˆ22æ—¥ ä¸‹åˆ5:49:36
  */
 
 public class RandomUnit {
@@ -18,15 +15,16 @@ public class RandomUnit {
 	/**
 	 * 
 	 * @Title: rangOne
-	 * @Description:·µ»Ø[-rang,rang]Ö®¼äµÄËæ»úÊı
+	 * @Description: è¿”å›[-rang,rang]ä¹‹é—´çš„éšæœºæ•°
 	 * @param rang
+	 * @return
 	 * @return: int
 	 */
 	public int rangOne(int rang){
 		if(rang <2){
 			return 0;
 		}
-		int flag = (int)(Math.random()*1000);//Õı¸º±êÖ¾Î»
+		int flag = (int)(Math.random()*1000);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾Î»
 		flag = flag%2;
 		if(flag == 1){//
 			return negativeAndpositive(rang*-1);
@@ -37,8 +35,9 @@ public class RandomUnit {
 	/**
 	 * 
 	 * @Title: negativeAndpositive
-	 * @Description: Éú³É[0,|rang|]Ö®¼äµÄËæ»úÊı£¬¸ù¾İrangµÄÕı¸º£¬·µ»ØÕı¸º
-	 * @param rang ¿ÉÎªÕıÊı¸ºÊı
+	 * @Description: ç”Ÿæˆ[0,|rang|]ä¹‹é—´çš„éšæœºæ•°ï¼Œæ ¹æ®rangçš„æ­£è´Ÿï¼Œè¿”å›æ­£è´Ÿ
+	 * @param rang å¯ä¸ºæ­£æ•°è´Ÿæ•°
+	 * @return
 	 * @return: int
 	 */
 	public int negativeAndpositive(int rang){
@@ -51,20 +50,22 @@ public class RandomUnit {
 	/**
 	 * 
 	 * @Title: getFlag
-	 * @Description: ·µ»ØÒ»¸ö0»òÕß1µÄ±êÖ¾Î»
+	 * @Description: è¿”å›ä¸€ä¸ª0æˆ–è€…1çš„æ ‡å¿—ä½
+	 * @return
 	 * @return: int
 	 */
 	public int getFlag(){
-		int flag = (int)(Math.random()*1000);//Õı¸º±êÖ¾Î»
+		int flag = (int)(Math.random()*1000);//æ­£è´Ÿæ ‡å¿—ä½
 		flag = flag%2;
 		return flag;
 	}
 	/**
 	 * 
 	 * @Title: minAndMax
-	 * @Description: Éú³É[min,max]Ö®¼äµÄÊı¾İ
+	 * @Description: ç”Ÿæˆ[min,max]ä¹‹é—´çš„æ•°æ®
 	 * @param min
 	 * @param max
+	 * @return
 	 * @return: int
 	 */
 	
@@ -82,11 +83,13 @@ public class RandomUnit {
 		
 	}
 	/**
+	 * 
 	 * @Title: getArrays
-	 * @Description: »ñÈ¡Ò»¸ö³¤¶ÈÊÇlengthµÄ·¶Î§ÔÚ[min,max]Ö®¼äµÄËæ»úÊıĞòÁĞ£¬ÂÒĞò
+	 * @Description: è·å–ä¸€ä¸ªé•¿åº¦æ˜¯lengthçš„èŒƒå›´åœ¨[min,max]ä¹‹é—´çš„éšæœºæ•°åºåˆ—ï¼Œä¹±åº
 	 * @param length
 	 * @param min
 	 * @param max
+	 * @return
 	 * @return: int[]
 	 */
 	public int[] getArrays(int length,int min,int max){
@@ -100,11 +103,13 @@ public class RandomUnit {
 		return arrays;
 	}
 	/**
-	 * @Title: getArrysNotRepeat
-	 * @Description: »ñÈ¡Ò»¸ö²»ÖØ¸´µÄËæ»úÊıÊı×é(forÑ­»·)
+	 * 
+	 * @Title: getArraysNotRepeat
+	 * @Description: è·å–ä¸€ä¸ªä¸é‡å¤çš„éšæœºæ•°æ•°ç»„(forå¾ªç¯)
 	 * @param length
 	 * @param min
 	 * @param max
+	 * @return
 	 * @return: int[]
 	 */
 	public int[] getArraysNotRepeat(int length,int min,int max){

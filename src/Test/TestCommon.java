@@ -20,7 +20,7 @@ public class TestCommon {
 		}*/
 		long currentTimeMillis = System.currentTimeMillis();
 		int[] arrays = randomUnit.getArraysNotRepeat(100, -10, 100000);
-		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info("时锟斤拷"+(System.currentTimeMillis()-currentTimeMillis));
 		for (int i = 0; i < arrays.length; i++) {
 			logger.info(""+arrays[i]);
 		}
@@ -36,11 +36,11 @@ public class TestCommon {
 		logger.info(""+basicFor);
 		currentTimeMillis = System.currentTimeMillis();
 		int subMaxSum = maxSonLine.subMaxSum(arrays, 0, arrays.length-1);
-		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info("鏃堕棿"+(System.currentTimeMillis()-currentTimeMillis));
 		logger.info(""+subMaxSum);
 		currentTimeMillis = System.currentTimeMillis();
 		int subMaxSum1 = maxSonLine.grandySum(arrays);
-		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info("鏃堕棿"+(System.currentTimeMillis()-currentTimeMillis));
 		logger.info(""+subMaxSum1);
 		
 		

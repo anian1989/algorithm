@@ -5,18 +5,18 @@ import java.math.BigInteger;
 /**
  * 
  * @ClassName: TestBIgInt
- * @Description: ÓÃÓÚ¼ÆËãX^n £¬Ë¼ÏëÊÇ Èç¹ûnÊÇÅ¼Êı£ºX^n=(X^n/2) Èç´ËÒ»Ö±·Ö²ğ£¬Èç¹ûÊÇÆæÊıÔòÔÙ³ËX
+ * @Description: ç”¨äºè®¡ç®—X^n ï¼Œæ€æƒ³æ˜¯ å¦‚æœnæ˜¯å¶æ•°ï¼šX^n=(X^n/2) å¦‚æ­¤ä¸€ç›´åˆ†æ‹†ï¼Œå¦‚æœæ˜¯å¥‡æ•°åˆ™å†ä¹˜X
  * @author: junshuaizhang1
- * @date: 2017Äê3ÔÂ18ÈÕ ÏÂÎç2:56:28
+ * @date: 2017å¹´3æœˆ22æ—¥ ä¸‹åˆ6:04:22
  */
 public class TestBIgInt {
 
-	public static int LENGTH = 10000000;//n´Î·½
-	public static BigInteger bigInteger = new BigInteger("2");//µ×Êı
+	public static int LENGTH = 10000000;//næ¬¡æ–¹
+	public static BigInteger bigInteger = new BigInteger("2");//åº•æ•°
 	/**
 	 * 
 	 * @Title: main
-	 * @Description: ÓÃÓÚ¼ÆËãX^n £¬Ë¼ÏëÊÇ Èç¹ûnÊÇÅ¼Êı£ºX^n=(X^n/2) Èç´ËÒ»Ö±·Ö²ğ£¬Èç¹ûÊÇÆæÊıÔòÔÙ³ËX
+	 * @Description:ç”¨äºè®¡ç®—X^n ï¼Œæ€æƒ³æ˜¯ å¦‚æœnæ˜¯å¶æ•°ï¼šX^n=(X^n/2) å¦‚æ­¤ä¸€ç›´åˆ†æ‹†ï¼Œå¦‚æœæ˜¯å¥‡æ•°åˆ™å†ä¹˜X
 	 * @param args
 	 * @return: void
 	 */
@@ -31,7 +31,7 @@ public class TestBIgInt {
 		 
 		 System.out.println("--------------------------------------------");
 		 
-		 old();//³£¹æ×ö·¨
+		 old();//å¸¸è§„åšæ³•
 	}
 	
 	

@@ -5,16 +5,16 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @ClassName: MaxSonLine
- * @Description: ×î´ó×ÓĞòÁĞºÍ£¨¼ÙÉè×îÖÕµÄºÍÊÇ´óÓÚ0µÄ£©
+ * @Description: æœ€å¤§å­åºåˆ—å’Œï¼ˆå‡è®¾æœ€ç»ˆçš„å’Œæ˜¯å¤§äº0çš„ï¼‰
  * @author: junshuaizhang1
- * @date: 2017Äê3ÔÂ21ÈÕ ÏÂÎç6:26:47
+ * @date: 2017å¹´3æœˆ21æ—¥ ä¸‹åˆ6:26:47
  */
 public class MaxSonLine {
 	private static final Logger logger = LoggerFactory.getLogger(MaxSonLine.class);
 	/**
 	 * 
 	 * @Title: basicFor
-	 * @Description: ÀûÓÃforÑ­»·²é³ö×î´ó×ÓĞòÁĞµÄÖµ
+	 * @Description: åˆ©ç”¨forå¾ªç¯æŸ¥å‡ºæœ€å¤§å­åºåˆ—çš„å€¼
 	 * @param base
 	 * @return: int
 	 */
@@ -33,8 +33,8 @@ public class MaxSonLine {
 
 	/**
 	 * @Title: subMaxSum
-	 * @Description: ÓÃµİ¹é·ÖÖÎµÄË¼Ïë£¬»ñÈ¡×î´ó×ÓĞòÁĞ
-	 *               Ë¼Ïë£º½«Êı×éa·ÖÎªÁ½²¿·Ö£¬a×î´óÖµÊÇ×ó°ë²¿·ÖµÄ×î´óÖµ¡¢ÓĞ°ë²¿·Ö×î´óÖµºÍ°üº¬ÖĞ¼ä±ß½çÔªËØµÄ×î´óÖµÖĞµÄÒ»¸ö¡£
+	 * @Description: ç”¨é€’å½’åˆ†æ²»çš„æ€æƒ³ï¼Œè·å–æœ€å¤§å­åºåˆ—
+	 *               æ€æƒ³ï¼šå°†æ•°ç»„aåˆ†ä¸ºä¸¤éƒ¨åˆ†ï¼Œaæœ€å¤§å€¼æ˜¯å·¦åŠéƒ¨åˆ†çš„æœ€å¤§å€¼ã€æœ‰åŠéƒ¨åˆ†æœ€å¤§å€¼å’ŒåŒ…å«ä¸­é—´è¾¹ç•Œå…ƒç´ çš„æœ€å¤§å€¼ä¸­çš„ä¸€ä¸ªã€‚
 	 * @param a
 	 * @param left
 	 * @param right
@@ -45,7 +45,7 @@ public class MaxSonLine {
 			if (a[left] > 0)
 				return a[left];
 			else
-				return 0;//ÒòÎªMax³õÊ¼ÖµÎª0
+				return 0;//å› ä¸ºMaxåˆå§‹å€¼ä¸º0
 		}
 		int leftMax = 0, rightMax = 0, middleLeftMax = 0, middleRightMax = 0;
 		int middle = (right + left) / 2;
@@ -72,13 +72,13 @@ public class MaxSonLine {
 	/**
 	 * 
 	 * @Title: grandySum
-	 * @Description: Ì°ĞÄËã·¨½â¾ö×î´ó×ÓĞòÁĞºÍ
-	 * Ë¼Â·£º 
-         * ×î´ó×ÓĞòÁĞ¿Ï¶¨²»ÊÇÒÔÒ»¸ö¸ºÊı¿ªÍ· 
-         * Í¬Àí¿Ï¶¨²»ÊÇÒÔÒ»¸ö¸ºµÄ×ÓĞòÁĞ¿ªÍ· 
-         * Ö»Òª×ÓĞòÁĞºÍĞ¡ÓÚ0 ÄÇÃ´¾ÍÖØÖÃsum 
-         * µ«ÊÇ×î´óµÄsumÒÑ¾­±£´æÔÚmax 
-         * ËùÒÔ²»ÓÃµ£ĞÄ×î´ósum¶ªÊ§ 
+	 * @Description: è´ªå¿ƒç®—æ³•è§£å†³æœ€å¤§å­åºåˆ—å’Œ
+	 * æ€è·¯ï¼š 
+         * æœ€å¤§å­åºåˆ—è‚¯å®šä¸æ˜¯ä»¥ä¸€ä¸ªè´Ÿæ•°å¼€å¤´ 
+         * åŒç†è‚¯å®šä¸æ˜¯ä»¥ä¸€ä¸ªè´Ÿçš„å­åºåˆ—å¼€å¤´ 
+         * åªè¦å­åºåˆ—å’Œå°äº0 é‚£ä¹ˆå°±é‡ç½®sum 
+         * ä½†æ˜¯æœ€å¤§çš„sumå·²ç»ä¿å­˜åœ¨max 
+         * æ‰€ä»¥ä¸ç”¨æ‹…å¿ƒæœ€å¤§sumä¸¢å¤± 
 	 * @param a
 	 * @return
 	 * @return: int
