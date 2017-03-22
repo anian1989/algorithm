@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @ClassName: MaxSonLine
- * @Description: 最大子序列和
+ * @Description: 最大子序列和（假设最终的和是大于0的）
  * @author: junshuaizhang1
  * @date: 2017年3月21日 下午6:26:47
  */
@@ -66,8 +66,33 @@ public class MaxSonLine {
 			}
 		}
 		leftMax = Math.max(leftMax, middleRightMax+middleLeftMax);
-//		logger.info("left:"+left+",right:"+right+",leftMax:"+leftMax+",rightMax:"+rightMax);
 		return Math.max(leftMax, rightMax);
 
+	}
+	/**
+	 * 
+	 * @Title: grandySum
+	 * @Description: 贪心算法解决最大子序列和
+	 * 思路： 
+         * 最大子序列肯定不是以一个负数开头 
+         * 同理肯定不是以一个负的子序列开头 
+         * 只要子序列和小于0 那么就重置sum 
+         * 但是最大的sum已经保存在max 
+         * 所以不用担心最大sum丢失 
+	 * @param a
+	 * @return
+	 * @return: int
+	 */
+	public int grandySum(int[] a){
+		int max = 0;
+		int thisMaxSum = 0;
+		for (int i = 0; i < a.length; i++) {
+			thisMaxSum +=a[i];
+			if(thisMaxSum>max)
+				max = thisMaxSum;
+			else if(thisMaxSum<0)
+				thisMaxSum = 0;
+		}
+		return max;
 	}
 }

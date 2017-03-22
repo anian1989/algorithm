@@ -27,18 +27,21 @@ public class TestCommon {
 	}
 	@Test
 	public void testMaxSonLine1(){
-		int[] arrays = randomUnit.getArrays(800000, -10000, 10000);
-		String jsonString = JSON.toJSONString(arrays);
-//		logger.info(jsonString);
-		long currentTimeMillis = System.currentTimeMillis();
+		int[] arrays = randomUnit.getArrays(108, -1000, 10);
+
 		MaxSonLine maxSonLine = new MaxSonLine();
+		long currentTimeMillis = System.currentTimeMillis();
 		int basicFor = maxSonLine.basicFor(arrays);
 		logger.info(""+(System.currentTimeMillis()-currentTimeMillis));
 		logger.info(""+basicFor);
 		currentTimeMillis = System.currentTimeMillis();
 		int subMaxSum = maxSonLine.subMaxSum(arrays, 0, arrays.length-1);
-		logger.info(""+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
 		logger.info(""+subMaxSum);
+		currentTimeMillis = System.currentTimeMillis();
+		int subMaxSum1 = maxSonLine.grandySum(arrays);
+		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info(""+subMaxSum1);
 		
 		
 	}
