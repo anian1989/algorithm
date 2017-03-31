@@ -49,6 +49,20 @@ public class TestBIgInt {
 				return multiply;
 			}
 	}
+	public static int binInt(int bigInteger,int n ){
+		if(n==1)
+			return bigInteger;
+		else
+			 if(n%2==1){
+				int bin = binInt(bigInteger,n/2);
+				int multiply = bin*bin;
+				return bigInteger*multiply;
+			}else{
+				int bin = binInt(bigInteger,n/2);
+				int  multiply = bin*bin;
+				return multiply;
+			}
+	}
 	
 	public static void old(){
 		System.out.println();
