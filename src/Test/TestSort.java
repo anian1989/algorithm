@@ -51,6 +51,8 @@ public class TestSort {
     }
     @Test
     public void testInsertSort(){
+        LENGTH = 20;
+        MAX = 2000;
         this.print(new InsertSort());
     }
 @Test
