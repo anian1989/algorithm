@@ -24,7 +24,7 @@ public class RandomUnit {
 		if(rang <2){
 			return 0;
 		}
-		int flag = (int)(Math.random()*1000);//������־λ
+		int flag = (int)(Math.random()*1000);//
 		flag = flag%2;
 		if(flag == 1){//
 			return negativeAndpositive(rang*-1);
@@ -42,9 +42,10 @@ public class RandomUnit {
 	 */
 	public int negativeAndpositive(int rang){
 		if(rang==0) return 0;
-		int abs = Math.abs(rang);
+		int abs = Math.abs(rang);//返回绝对值
 		int random = (int)(Math.random()*abs);
-		return random*abs/rang;		
+		int re = random * (abs / rang);
+		return re;
 	}
 	
 	/**

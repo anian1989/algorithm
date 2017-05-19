@@ -1,4 +1,4 @@
-package ch2;
+package ch3;
 
 import java.util.ArrayList;
 import java.util.Stack;

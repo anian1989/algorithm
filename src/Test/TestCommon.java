@@ -20,7 +20,7 @@ public class TestCommon {
 		}*/
 		long currentTimeMillis = System.currentTimeMillis();
 		int[] arrays = randomUnit.getArraysNotRepeat(100, -10, 100000);
-		logger.info("ʱ��"+(System.currentTimeMillis()-currentTimeMillis));
+		logger.info("时间"+(System.currentTimeMillis()-currentTimeMillis));
 		for (int i = 0; i < arrays.length; i++) {
 			logger.info(""+arrays[i]);
 		}
