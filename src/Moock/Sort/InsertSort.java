@@ -8,7 +8,7 @@ public class InsertSort implements Sort{
 
     @Override
     public int[] sort(int[] a) {
-        return this.shellSort(a);
+        return this.shellSortImpro(a);
     }
 
     /**
@@ -29,12 +29,28 @@ public class InsertSort implements Sort{
     }
 
     /**
+     * 对基本的插入排序进行改进，借用临时量，进行比较之后不再交换数值，而是直接移动
+     * @param a
+     * @return
+     */
+    public  int[] sortImpro(int[] a){
+        for (int i = 1; i < a.length ; i++) {
+            int j = i;
+            int temp = a[j];
+            for (; j >0 && a[j-1] > temp; j--) {
+                a[j] = a[j-1];
+            }
+            a[j] = temp;
+        }
+        return a;
+    }
+    /**
      * 希尔排序，希尔排序最主要的是设计步进值  此处用下面的步进值
      * <O(n^(3/2)) by Knuth,1973>: 1, 4, 13, 40, 121, ...
      * @param a
      * @return
      */
-    /*public int[] shellSort(int[] a){
+    public int[] shellSortBasic(int[] a){
         if (null == a || a.length <1)
             return a;
         int Step = 1;
@@ -53,9 +69,14 @@ public class InsertSort implements Sort{
             Step = Step/3;
         }
         return a;
-    }*/
+    }
 
-    public int[] shellSort(int[] a){
+    /**
+     * 采用不交换值的插入方式
+     * @param a
+     * @return
+     */
+    public int[] shellSortImpro(int[] a){
         if (null == a || a.length <1){
             return a;
         }
@@ -64,13 +85,15 @@ public class InsertSort implements Sort{
             Step = Step*3+1;
         while (Step >0){
 
-            for (int i = 0; i < Step; i++) {
-                for (int j = i+Step; j <a.length && a[j]< a[j-Step]; j+=Step) {
-                    a[j] = a[j] + a[j-Step];
-                    a[j-Step] = a[j] - a[j-Step];
-                    a[j] = a[j] - a[j-Step];
+            for (int i = Step; i < a.length; i++) {
+                int j = i-Step;
+                int temp = a[i];
+                for (; j >=0 && a[j]>a[j+Step]; j-=Step) {
+                    a[j+Step] = a[j];
                 }
+                 a[j+Step] = temp;
             }
+
             Step = Step/3;
         }
 
