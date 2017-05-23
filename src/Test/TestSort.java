@@ -1,10 +1,7 @@
 package Test;
 
 import Common.RandomUnit;
-import Moock.Sort.InsertSort;
-import Moock.Sort.MaopaoSort;
-import Moock.Sort.SelectSort;
-import Moock.Sort.Sort;
+import Moock.Sort.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,6 +35,11 @@ public class TestSort {
 
     public void print(Sort selectSort){
         int[] arrays = randomUnit.getArrays(LENGTH, MIN, MAX);
+        System.out.println();
+        for (int i: arrays  ) {
+            System.out.print(i+",");
+        }
+        System.out.println();
         arrays= selectSort.sort(arrays);
         System.out.println();
         for (int i: arrays  ) {
@@ -55,12 +57,22 @@ public class TestSort {
         MAX = 200000;
         this.print(new InsertSort());
     }
-@Test
+    @Test
     public void testMaopaoSort(){
-        LENGTH = 20;
+        LENGTH = 10;
         MAX = 200;
 
         this.print(new MaopaoSort());
     }
+
+    @Test
+    public void testMergeSort(){
+        LENGTH = 10;
+        MAX = 200;
+
+        this.print(new MergeSort());
+    }
+
+
 
 }
