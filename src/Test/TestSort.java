@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
  */
 public class TestSort {
 
-    RandomUnit randomUnit = new RandomUnit();
+    private RandomUnit randomUnit = new RandomUnit();
     private static final Logger logger = LoggerFactory.getLogger(TestSort.class);
     private static long STARTTIMEMILLIS = 0L;
     private static int LENGTH = 10;
@@ -33,7 +33,7 @@ public class TestSort {
         logger.info("耗费时间："+(l-STARTTIMEMILLIS));
     }
 
-    public void print(Sort selectSort){
+    private void print(Sort selectSort){
         int[] arrays = randomUnit.getArrays(LENGTH, MIN, MAX);
         System.out.println();
         for (int i: arrays  ) {
@@ -62,7 +62,7 @@ public class TestSort {
         LENGTH = 10;
         MAX = 200;
 
-        this.print(new MaopaoSort());
+        this.print(new ExchangeSort());
     }
 
     @Test
