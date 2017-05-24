@@ -34,18 +34,32 @@ public class TestSort {
     }
 
     private void print(Sort selectSort){
+        this.printV2(selectSort,true,true);
+    }
+
+    /**
+     *
+     * @param selectSort 排序方式
+     * @param primitive 是否打印生成的随机数
+     * @param result 是否打印结果
+     */
+    private void printV2(Sort selectSort,boolean primitive,boolean result){
         int[] arrays = randomUnit.getArrays(LENGTH, MIN, MAX);
-        System.out.println();
-        for (int i: arrays  ) {
-            System.out.print(i+",");
+        if (primitive){
+            System.out.println();
+            for (int i: arrays  ) {
+                System.out.print(i+",");
+            }
+            System.out.println();
         }
-        System.out.println();
         arrays= selectSort.sort(arrays);
-        System.out.println();
-        for (int i: arrays  ) {
-            System.out.print(i+",");
+        if (result){
+            System.out.println();
+            for (int i: arrays  ) {
+                System.out.print(i+",");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
     @Test
     public void testSelectSort(){
@@ -68,9 +82,16 @@ public class TestSort {
     @Test
     public void testMergeSort(){
         LENGTH = 10;
-        MAX = 200;
+        MAX = 20;
 
         this.print(new MergeSort());
+    }
+    @Test
+    public void testQuickSort(){
+        LENGTH = 500000;
+        MAX = LENGTH*10;
+
+        this.printV2(new QuickSort(),false,false);
     }
 
 
