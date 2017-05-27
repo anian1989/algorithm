@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONArray;
 
 /**
  * Created by junshuaizhang1 on 2017/5/23.
- * 快速排序
+ * 快速排序:快速排序的核心思想是对于制定的数据找到排序后的正确位置
  */
 public class QuickSort extends   SortCommon implements Sort {
     @Override
