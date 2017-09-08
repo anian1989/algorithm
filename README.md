@@ -7,7 +7,7 @@
 
 # Moock包下
 慕课练习
-   * 选择排序（SelectSort）：
+   ## 选择排序（SelectSort）：
          * 选择排序
          * 堆排序（HeapSort）
    * 插入排序（InsertSort）：

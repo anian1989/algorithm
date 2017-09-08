@@ -97,10 +97,15 @@ public class TestSort {
 
     @Test
     public void testHeapSort(){
-        LENGTH = 10;
+        /*LENGTH = 10;
         MAX = LENGTH*10;
 
-        this.printV2(new HeapSort(),true,true);
+        this.printV2(new HeapSort(),true,true);*/
+
+        StringBuilder stringBuilder = new StringBuilder(null);
+
+        stringBuilder.append("123");
+
     }
 
 
