@@ -21,7 +21,7 @@ package EffectiveJava.bOverrideObject;
 public class OverrideEquals {
     public static void main(String[] args) {
 
-        Float f = new Float("2.1");
+        Float f = new Float("2.5");
 
         //returns the bits that represent the floating-point number
         System.out.println("Value = " + f.floatToRawIntBits(f));
