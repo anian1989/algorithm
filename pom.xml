@@ -76,8 +76,16 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 		<!--============ 以上为日志 -->
-		
-	</dependencies>
+
+	  <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+	  <dependency>
+		  <groupId>cglib</groupId>
+		  <artifactId>cglib</artifactId>
+		  <version>3.2.5</version>
+	  </dependency>
+
+
+  </dependencies>
 	
 	
 	<!-- 构建 -->
